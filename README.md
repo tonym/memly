@@ -1,90 +1,68 @@
 # Memly (fork of Mem0) — Sandbox for Memory Fabric Experiments
 
-**Memly** is a lightweight fork of [Mem0](https://github.com/mem0ai/mem0) we use as a **sandbox** to explore an event-driven memory fabric for AI agents and chatbots. It’s intended for rapid prototyping, proofs of concept, and community experimentation—not production. We upstream improvements to Mem0 when possible.
+**Disclaimer:** Memly is a sandbox fork for experiments and POCs; it is **not intended for production**. For production usage, see upstream Mem0.
 
-<p align="center">
-  <a href="https://github.com/mem0ai/mem0">
-    <img src="docs/images/banner-sm.png" width="800px" alt="Mem0 - The Memory Layer for Personalized AI">
-  </a>
-</p>
-<p align="center" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-  <a href="https://trendshift.io/repositories/11194" target="blank">
-    <img src="https://trendshift.io/api/badge/repositories/11194" alt="mem0ai%2Fmem0 | Trendshift" width="250" height="55"/>
-  </a>
-</p>
+[![Mem0 - The Memory Layer for Personalized AI](docs/images/banner-sm.png)](https://github.com/mem0ai/mem0)
 
-<p align="center">
-  <a href="https://mem0.ai">Learn more</a>
-  ·
-  <a href="https://mem0.dev/DiG">Join Discord</a>
-  ·
-  <a href="https://mem0.dev/demo">Demo</a>
-  ·
-  <a href="https://mem0.dev/openmemory">OpenMemory</a>
-</p>
+[Learn more](https://mem0.ai) · [Join Discord](https://mem0.dev/DiG) · [Demo](https://mem0.dev/demo) · [OpenMemory](https://mem0.dev/openmemory)
 
-<p align="center">
-  <a href="https://mem0.dev/DiG">
-    <img src="https://dcbadge.vercel.app/api/server/6PzXDgEjG5?style=flat" alt="Mem0 Discord">
-  </a>
-  <a href="https://pepy.tech/project/mem0ai">
-    <img src="https://img.shields.io/pypi/dm/mem0ai" alt="Mem0 PyPI - Downloads">
-  </a>
-  <a href="https://github.com/mem0ai/mem0">
-    <img src="https://img.shields.io/github/commit-activity/m/mem0ai/mem0?style=flat-square" alt="GitHub commit activity">
-  </a>
-  <a href="https://pypi.org/project/mem0ai" target="blank">
-    <img src="https://img.shields.io/pypi/v/mem0ai?color=%2334D058&label=pypi%20package" alt="Package version">
-  </a>
-  <a href="https://www.npmjs.com/package/mem0ai" target="blank">
-    <img src="https://img.shields.io/npm/v/mem0ai" alt="Npm package">
-  </a>
-  <a href="https://www.ycombinator.com/companies/mem0">
-    <img src="https://img.shields.io/badge/Y%20Combinator-S24-orange?style=flat-square" alt="Y Combinator S24">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://mem0.ai/research"><strong>📄 Building Production-Ready AI Agents with Scalable Long-Term Memory →</strong></a>
-</p>
-<p align="center">
-  <strong>⚡ +26% Accuracy vs. OpenAI Memory • 🚀 91% Faster • 💰 90% Fewer Tokens</strong>
-</p>
+[![Mem0 Discord](https://dcbadge.vercel.app/api/server/6PzXDgEjG5?style=flat)](https://mem0.dev/DiG)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/mem0ai)](https://pepy.tech/project/mem0ai)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/tonym/memly?style=flat-square)](https://github.com/tonym/memly)
+[![PyPI package](https://img.shields.io/pypi/v/mem0ai?color=%2334D058&label=pypi%20package)](https://pypi.org/project/mem0ai)
+[![Npm package](https://img.shields.io/npm/v/mem0ai)](https://www.npmjs.com/package/mem0ai)
+[![Y Combinator S24](https://img.shields.io/badge/Y%20Combinator-S24-orange?style=flat-square)](https://www.ycombinator.com/companies/mem0)
 
 ## What is Memly?
+
 Memly packages the Mem0 memory layer with a few convenience conventions we use in experiments:
+
 - **Typed memory events** (e.g., `OFFER_MADE`, `REFUND_APPROVED`, `KBA_PASSED`) for deterministic summaries and audit.
 - A thin **context-pack façade** that composes episodic TL;DR, key facts, and policy snippets with citations and version pins.
 - **Dual-surface policy model**: human-readable policy prose in a vector index; machine-enforced rules in a versioned registry.
 - Optional **hybrid retrieval** (lexical + vector) and reranking for policy/legal text.
 
+## What it is not
+
+- **Not** a supported product or drop-in replacement for Mem0.
+- Expect breaking changes; for production use [Mem0](https://github.com/mem0ai/mem0).
+
+## How we use it
+
 We use Memly to validate ideas quickly, then contribute stable improvements back to Mem0.
 
-> **Memly is not** a supported product or drop-in replacement for Mem0. Expect breaking changes; for production use [Mem0](https://github.com/mem0ai/mem0).
+## Relationship to Mem0
 
-##  🔥 Research Highlights
+Memly forks [Mem0](https://github.com/mem0ai/mem0) and upstreams improvements when they prove stable. Memly may diverge for sandbox experiments.
+
+## 🔥 Research Highlights
+
 - **+26% Accuracy** over OpenAI Memory on the LOCOMO benchmark
 - **91% Faster Responses** than full-context, ensuring low-latency at scale
 - **90% Lower Token Usage** than full-context, cutting costs without compromise
 - [Read the full paper](https://mem0.ai/research)
 
-# Introduction
+## Introduction
 
 [Mem0](https://mem0.ai) ("mem-zero") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions. It remembers user preferences, adapts to individual needs, and continuously learns over time—ideal for customer support chatbots, AI assistants, and autonomous systems.
 
 ### Key Features & Use Cases
 
 **Core Capabilities:**
+
 - **Multi-Level Memory**: Seamlessly retains User, Session, and Agent state with adaptive personalization
 - **Developer-Friendly**: Intuitive API, cross-platform SDKs, and a fully managed service option
 
 **Applications:**
+
 - **AI Assistants**: Consistent, context-rich conversations
 - **Customer Support**: Recall past tickets and user history for tailored help
 - **Healthcare**: Track patient preferences and history for personalized care
 - **Productivity & Gaming**: Adaptive workflows and environments based on user behavior
 
-## 🚀 Quickstart Guide <a name="quickstart"></a>
+## 🚀 Quickstart Guide
+
+> **Note:** The steps below follow the standard Mem0 / OpenMemory MCP workflow. Memly adds sandbox conventions on top but does not change the quickstart.
 
 Choose between our hosted platform or self-hosted package:
 
@@ -183,5 +161,9 @@ We now have a paper you can cite:
 
 Memly is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
 
-### NOTICE
-This repository is a fork of [Mem0](https://github.com/mem0ai/mem0) by mem0.ai and contributors © 2023–2024. Modifications in Memly are © 2024 the memly contributors. Memly is not an official product of mem0.ai.
+### Notices and attribution
+
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+**Trademarks & affiliation:** “Memly” is a fork name. This repository is not affiliated with or endorsed by mem0.ai. No trademark rights are granted by the Apache 2.0 license.
+
