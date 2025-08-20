@@ -1,3 +1,7 @@
+# Memly (fork of Mem0) — Sandbox for Memory Fabric Experiments
+
+**Memly** is a lightweight fork of [Mem0](https://github.com/mem0ai/mem0) we use as a **sandbox** to explore an event-driven memory fabric for AI agents and chatbots. It’s intended for rapid prototyping, proofs of concept, and community experimentation—not production. We upstream improvements to Mem0 when possible.
+
 <p align="center">
   <a href="https://github.com/mem0ai/mem0">
     <img src="docs/images/banner-sm.png" width="800px" alt="Mem0 - The Memory Layer for Personalized AI">
@@ -46,6 +50,17 @@
 <p align="center">
   <strong>⚡ +26% Accuracy vs. OpenAI Memory • 🚀 91% Faster • 💰 90% Fewer Tokens</strong>
 </p>
+
+## What is Memly?
+Memly packages the Mem0 memory layer with a few convenience conventions we use in experiments:
+- **Typed memory events** (e.g., `OFFER_MADE`, `REFUND_APPROVED`, `KBA_PASSED`) for deterministic summaries and audit.
+- A thin **context-pack façade** that composes episodic TL;DR, key facts, and policy snippets with citations and version pins.
+- **Dual-surface policy model**: human-readable policy prose in a vector index; machine-enforced rules in a versioned registry.
+- Optional **hybrid retrieval** (lexical + vector) and reranking for policy/legal text.
+
+We use Memly to validate ideas quickly, then contribute stable improvements back to Mem0.
+
+> **Memly is not** a supported product or drop-in replacement for Mem0. Expect breaking changes; for production use [Mem0](https://github.com/mem0ai/mem0).
 
 ##  🔥 Research Highlights
 - **+26% Accuracy** over OpenAI Memory on the LOCOMO benchmark
@@ -166,4 +181,7 @@ We now have a paper you can cite:
 
 ## ⚖️ License
 
-Apache 2.0 — see the [LICENSE](LICENSE) file for details.
+Memly is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
+
+### NOTICE
+This repository is a fork of [Mem0](https://github.com/mem0ai/mem0) by mem0.ai and contributors © 2023–2024. Modifications in Memly are © 2024 the memly contributors. Memly is not an official product of mem0.ai.
